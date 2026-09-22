@@ -1,0 +1,60 @@
+Hexenwail Release Build
+Version: 0.8.0-beta.r30
+Built: 2026-09-21 20:49:05 UTC
+
+Included platforms:
+- linux-x86_64/          Linux 64-bit (portable, any distro)
+- windows-x86_64/        Windows 64-bit
+
+On NixOS, install from the flake rather than from this zip:
+  nix run github:bobberb/hexenwail
+That builds against your own nixpkgs, so the binary's rpaths point at store
+paths you actually have.  A prebuilt Nix-store binary could not.
+
+No game data is included -- Hexenwail is an engine and ships no Raven content.
+Put a "data1" directory (pak0.pak, pak1.pak) from a GOG, Steam or disc copy of
+Hexen II beside the executable.  If you don't own it, each platform directory
+carries a helper that downloads the free 1997 three-level demo and verifies it:
+
+- linux-x86_64/get_demo.sh          run it from that directory
+- windows-x86_64/get_demo.cmd       double-click, or run from cmd
+
+The demo data comes from the uHexen2 project and is not ours to relicense.
+
+Compiled gamecode (gamecode/):
+This release also carries the Hexen II game logic rebuilt from source, with
+fixes that are not in Raven's 1997 progs.dat -- chiefly dropped backpacks
+silently vanishing in co-op and deathmatch.  The engine already loads it from
+beside the executable on both platforms, so there is nothing to install and
+nothing of yours is overwritten.  Launch with -vanillaprogs to ignore it and
+use your own install's gamecode instead; the "Gamecode:" line the engine
+prints on load always names the file it actually used.
+
+gamecode/ is the same three files kept separately.  On Windows it is the copy
+the engine loads, since it sits beside glh2.exe; on Linux the engine loads its
+own from the platform directory and this is a spare.  Copying it into a Hexen
+II folder is needed only to feed a DIFFERENT engine, and that overwrites files
+retail keeps loose with no .pak copy to fall back on -- back up first.  Read
+gamecode/README.txt; it covers all of this, and lists one deliberate behaviour
+change to the Crusader's Glyph of the Ancients.
+
+Crash reporting (Windows):
+The Windows build carries Dr. MinGW, so a crash writes "glh2.RPT" beside
+glh2.exe by itself -- nothing to install, nothing to turn on.  Send that file
+and qconsole.log with any crash report; between them they name the source file
+and line the game died on.
+
+The .exe ships with its debug symbols, which is why those reports are readable.
+It costs about 4 MB of download and nothing else: the machine code is identical
+to a stripped build and the symbols are never loaded while you play.
+
+Licenses:
+- licenses/COPYING.GPL2          Engine (GPL-2.0+)
+- licenses/LICENSE.SDL3           SDL3 (Zlib)
+- licenses/COPYING.ogg-vorbis    libogg/libvorbis (BSD-3)
+- licenses/LICENSE.drmingw       Dr. MinGW crash handler (LGPL-2.1+)
+- licenses/LICENSE.libdwarf      libdwarf, via Dr. MinGW (LGPL-2.1+)
+- licenses/LICENSE.zlib          zlib, via Dr. MinGW (Zlib)
+- dr_mp3, dr_flac, dr_wav are public domain (dr_libs by David Reid)
+
+Built with Nix flakes

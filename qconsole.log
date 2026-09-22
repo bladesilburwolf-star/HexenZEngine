@@ -1,0 +1,464 @@
+LOG started on: 09/22/2026 17:51:01 - LOG LEVEL: normal
+Command line: C:\PC\iso\hexenwail-0.8.0-beta.r30-windows-x86_64\glh2.exe 
+Hexenwail 0.8.0-beta.r30 (Win64)
+based on Hexen II engine 1.29 / Hammer of Thyrion 1.5.10
+=======================================
+basedir is: C:\PC\iso\hexenwail-0.8.0-beta.r30-windows-x86_64
+userdir is: C:\PC\iso\hexenwail-0.8.0-beta.r30-windows-x86_64
+Detected byte order: LE
+Found SDL version 3.2.12
+Host_Init
+Server using protocol 19 (Raven/MP/1.12)
+Added packfile C:\PC\iso\hexenwail-0.8.0-beta.r30-windows-x86_64\data1\pak0.pak (797 files)
+Playing the demo version.
+UDP, Local address: 192.168.0.11
+UDP Initialized
+Exe: 00:00:00 Jan  1 1980
+512.0 megabyte heap
+Console initialized.
+Using system GL library
+Requested mode 6: 1280x720x32
+Video Mode Set : 1280x720x32
+R:8 G:8 B:8 A:8, Z:24, S:8
+GL_VENDOR: ATI Technologies Inc.
+GL_RENDERER: AMD Radeon HD 6450
+GL_VERSION: 4.3.13399 Compatibility Profile Context 15.201.1151.1008
+GLSL_VERSION: 4.40
+OpenGL max.texture size: 16384
+OpenGL max.MSAA samples: 4
+NPOT textures enabled
+Compressed textures: S3TC yes, RGTC yes, BPTC yes
+GL debug output enabled
+Anisotropic filtering: enabled (max 16.0)
+Initializing shaders...
+  uniform block VertParams: 352 bytes
+  uniform block FragParams: 128 bytes
+  shader '2d' loaded (program 3)
+  shader 'flat' loaded (program 6)
+[SHADER] FRAGMENT COMPILE ERROR:
+Fragment shader failed to compile with the following errors:
+ERROR: 0:19: error(#385) Binding point for: buffer block must be equal or greater than 0 and less than: GL_MAX_SHADER_STORAGE_BUFFER_OBJECT_BINDINGS
+ERROR: 0:169: error(#143) Undeclared identifier: Lights
+ERROR: 0:169: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:169: error(#222) Illegal vector field selection: origin
+ERROR: 0:169: error(#174) Not enough data provided for construction constructor
+ERROR: 0:171: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:171: error(#222) Illegal vector field selection: radius
+ERROR: 0:172: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:172: error(#222) Illegal vector field selection: minlight
+ERROR: 0:176: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:176: error(#222) Illegal vector field selection: color
+ERROR: error(#273) 11 compilation errors.  No code generated
+
+
+[SHADER] First 300 chars of source:
+#version 430 core
+uniform sampler2D u_texture0;
+uniform sampler2D u_texture1;
+uniform sampler2D u_texture2;
+uniform sampler2D u_texture3;
+uniform sampler2D u_texture4;
+uniform vec3 u_material;
+uniform float u_fog_density;
+uniform vec3 u_fog_color;
+uniform float u_alpha_threshold;
+uniform float u_for
+Failed to load shader: world
+[SHADER] FRAGMENT COMPILE ERROR:
+Fragment shader failed to compile with the following errors:
+ERROR: 0:18: error(#385) Binding point for: buffer block must be equal or greater than 0 and less than: GL_MAX_SHADER_STORAGE_BUFFER_OBJECT_BINDINGS
+ERROR: 0:154: error(#143) Undeclared identifier: Lights
+ERROR: 0:154: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:154: error(#222) Illegal vector field selection: origin
+ERROR: 0:154: error(#174) Not enough data provided for construction constructor
+ERROR: 0:156: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:156: error(#222) Illegal vector field selection: radius
+ERROR: 0:157: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:157: error(#222) Illegal vector field selection: minlight
+ERROR: 0:161: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:161: error(#222) Illegal vector field selection: color
+ERROR: error(#273) 11 compilation errors.  No code generated
+
+
+[SHADER] First 300 chars of source:
+#version 430 core
+layout(early_fragment_tests) in;
+uniform sampler2D u_texture0;
+uniform sampler2D u_texture1;
+uniform sampler2D u_texture2;
+uniform sampler2D u_texture3;
+uniform sampler2D u_texture4;
+uniform vec3 u_material;
+uniform float u_fog_density;
+uniform vec3 u_fog_color;
+uniform float u_alp
+Failed to load shader: world_opaque
+[SHADER] FRAGMENT COMPILE ERROR:
+Fragment shader failed to compile with the following errors:
+ERROR: 0:29: error(#385) Binding point for: buffer block must be equal or greater than 0 and less than: GL_MAX_SHADER_STORAGE_BUFFER_OBJECT_BINDINGS
+ERROR: 0:122: error(#143) Undeclared identifier: Lights
+ERROR: 0:122: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:122: error(#222) Illegal vector field selection: origin
+ERROR: 0:122: error(#174) Not enough data provided for construction constructor
+ERROR: 0:123: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:123: error(#222) Illegal vector field selection: radius
+ERROR: 0:125: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:125: error(#222) Illegal vector field selection: color
+ERROR: error(#273) 9 compilation errors.  No code generated
+
+
+[SHADER] First 300 chars of source:
+#version 430 core
+#ifdef NOPERSP
+#define TCQUAL noperspective
+#else
+#define TCQUAL
+#endif
+uniform sampler2D u_texture0;
+uniform float u_fog_density;
+uniform vec3 u_fog_color;
+uniform float u_alpha_threshold;
+uniform float u_force_opaque_alpha;
+uniform vec2 u_alias_caustics;
+uniform vec2 u_turb;
+unif
+Failed to load shader: alias
+[SHADER] FRAGMENT COMPILE ERROR:
+Fragment shader failed to compile with the following errors:
+ERROR: 0:30: error(#385) Binding point for: buffer block must be equal or greater than 0 and less than: GL_MAX_SHADER_STORAGE_BUFFER_OBJECT_BINDINGS
+ERROR: 0:123: error(#143) Undeclared identifier: Lights
+ERROR: 0:123: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:123: error(#222) Illegal vector field selection: origin
+ERROR: 0:123: error(#174) Not enough data provided for construction constructor
+ERROR: 0:124: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:124: error(#222) Illegal vector field selection: radius
+ERROR: 0:126: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:126: error(#222) Illegal vector field selection: color
+ERROR: error(#273) 9 compilation errors.  No code generated
+
+
+[SHADER] First 300 chars of source:
+#version 430 core
+#define NOPERSP 1
+#ifdef NOPERSP
+#define TCQUAL noperspective
+#else
+#define TCQUAL
+#endif
+uniform sampler2D u_texture0;
+uniform float u_fog_density;
+uniform vec3 u_fog_color;
+uniform float u_alpha_threshold;
+uniform float u_force_opaque_alpha;
+uniform vec2 u_alias_caustics;
+uniform
+Failed to load shader: alias_np
+[SHADER] FRAGMENT COMPILE ERROR:
+Fragment shader failed to compile with the following errors:
+ERROR: 0:29: error(#385) Binding point for: buffer block must be equal or greater than 0 and less than: GL_MAX_SHADER_STORAGE_BUFFER_OBJECT_BINDINGS
+ERROR: 0:122: error(#143) Undeclared identifier: Lights
+ERROR: 0:122: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:122: error(#222) Illegal vector field selection: origin
+ERROR: 0:122: error(#174) Not enough data provided for construction constructor
+ERROR: 0:123: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:123: error(#222) Illegal vector field selection: radius
+ERROR: 0:125: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:125: error(#222) Illegal vector field selection: color
+ERROR: error(#273) 9 compilation errors.  No code generated
+
+
+[SHADER] First 300 chars of source:
+#version 430 core
+#ifdef NOPERSP
+#define TCQUAL noperspective
+#else
+#define TCQUAL
+#endif
+uniform sampler2D u_texture0;
+uniform float u_fog_density;
+uniform vec3 u_fog_color;
+uniform float u_alpha_threshold;
+uniform float u_force_opaque_alpha;
+uniform vec2 u_alias_caustics;
+uniform vec2 u_turb;
+unif
+Failed to load shader: skeletal
+[SHADER] FRAGMENT COMPILE ERROR:
+Fragment shader failed to compile with the following errors:
+ERROR: 0:30: error(#385) Binding point for: buffer block must be equal or greater than 0 and less than: GL_MAX_SHADER_STORAGE_BUFFER_OBJECT_BINDINGS
+ERROR: 0:123: error(#143) Undeclared identifier: Lights
+ERROR: 0:123: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:123: error(#222) Illegal vector field selection: origin
+ERROR: 0:123: error(#174) Not enough data provided for construction constructor
+ERROR: 0:124: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:124: error(#222) Illegal vector field selection: radius
+ERROR: 0:126: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:126: error(#222) Illegal vector field selection: color
+ERROR: error(#273) 9 compilation errors.  No code generated
+
+
+[SHADER] First 300 chars of source:
+#version 430 core
+#define NOPERSP 1
+#ifdef NOPERSP
+#define TCQUAL noperspective
+#else
+#define TCQUAL
+#endif
+uniform sampler2D u_texture0;
+uniform float u_fog_density;
+uniform vec3 u_fog_color;
+uniform float u_alpha_threshold;
+uniform float u_force_opaque_alpha;
+uniform vec2 u_alias_caustics;
+uniform
+Failed to load shader: skeletal_np
+  shader 'particle' loaded (program 9)
+  shader 'sky_layers' loaded (program 12)
+  shader 'sky_boxside' loaded (program 15)
+  shader 'sky_cubemap' loaded (program 18)
+[SHADER] FRAGMENT COMPILE ERROR:
+Fragment shader failed to compile with the following errors:
+ERROR: 0:33: error(#385) Binding point for: buffer block must be equal or greater than 0 and less than: GL_MAX_SHADER_STORAGE_BUFFER_OBJECT_BINDINGS
+ERROR: 0:182: error(#143) Undeclared identifier: Lights
+ERROR: 0:182: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:182: error(#222) Illegal vector field selection: origin
+ERROR: 0:182: error(#174) Not enough data provided for construction constructor
+ERROR: 0:184: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:184: error(#222) Illegal vector field selection: radius
+ERROR: 0:185: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:185: error(#222) Illegal vector field selection: minlight
+ERROR: 0:189: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:189: error(#222) Illegal vector field selection: color
+ERROR: error(#273) 11 compilation errors.  No code generated
+
+
+[SHADER] First 300 chars of source:
+#version 430 core
+#define OIT 1
+vec4 fragColor = vec4(0.0);
+layout(location=0) out vec4 out_accum;
+layout(location=1) out vec4 out_reveal;
+void main_body();
+void main() {
+    main_body();
+    fragColor = clamp(fragColor, 0.0, 1.0);
+    float z = 1.0 / gl_FragCoord.w;
+    float w = clamp(fragColor.a 
+  world_oit: FAILED
+[SHADER] FRAGMENT COMPILE ERROR:
+Fragment shader failed to compile with the following errors:
+ERROR: 0:42: error(#385) Binding point for: buffer block must be equal or greater than 0 and less than: GL_MAX_SHADER_STORAGE_BUFFER_OBJECT_BINDINGS
+ERROR: 0:135: error(#143) Undeclared identifier: Lights
+ERROR: 0:135: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:135: error(#222) Illegal vector field selection: origin
+ERROR: 0:135: error(#174) Not enough data provided for construction constructor
+ERROR: 0:136: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:136: error(#222) Illegal vector field selection: radius
+ERROR: 0:138: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:138: error(#222) Illegal vector field selection: color
+ERROR: error(#273) 9 compilation errors.  No code generated
+
+
+[SHADER] First 300 chars of source:
+#version 430 core
+#define OIT 1
+vec4 fragColor = vec4(0.0);
+layout(location=0) out vec4 out_accum;
+layout(location=1) out vec4 out_reveal;
+void main_body();
+void main() {
+    main_body();
+    fragColor = clamp(fragColor, 0.0, 1.0);
+    float z = 1.0 / gl_FragCoord.w;
+    float w = clamp(fragColor.a 
+  alias_oit: FAILED
+[SHADER] FRAGMENT COMPILE ERROR:
+Fragment shader failed to compile with the following errors:
+ERROR: 0:43: error(#385) Binding point for: buffer block must be equal or greater than 0 and less than: GL_MAX_SHADER_STORAGE_BUFFER_OBJECT_BINDINGS
+ERROR: 0:136: error(#143) Undeclared identifier: Lights
+ERROR: 0:136: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:136: error(#222) Illegal vector field selection: origin
+ERROR: 0:136: error(#174) Not enough data provided for construction constructor
+ERROR: 0:137: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:137: error(#222) Illegal vector field selection: radius
+ERROR: 0:139: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:139: error(#222) Illegal vector field selection: color
+ERROR: error(#273) 9 compilation errors.  No code generated
+
+
+[SHADER] First 300 chars of source:
+#version 430 core
+#define OIT 1
+vec4 fragColor = vec4(0.0);
+layout(location=0) out vec4 out_accum;
+layout(location=1) out vec4 out_reveal;
+void main_body();
+void main() {
+    main_body();
+    fragColor = clamp(fragColor, 0.0, 1.0);
+    float z = 1.0 / gl_FragCoord.w;
+    float w = clamp(fragColor.a 
+  alias_np_oit: FAILED
+[SHADER] FRAGMENT COMPILE ERROR:
+Fragment shader failed to compile with the following errors:
+ERROR: 0:42: error(#385) Binding point for: buffer block must be equal or greater than 0 and less than: GL_MAX_SHADER_STORAGE_BUFFER_OBJECT_BINDINGS
+ERROR: 0:135: error(#143) Undeclared identifier: Lights
+ERROR: 0:135: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:135: error(#222) Illegal vector field selection: origin
+ERROR: 0:135: error(#174) Not enough data provided for construction constructor
+ERROR: 0:136: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:136: error(#222) Illegal vector field selection: radius
+ERROR: 0:138: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:138: error(#222) Illegal vector field selection: color
+ERROR: error(#273) 9 compilation errors.  No code generated
+
+
+[SHADER] First 300 chars of source:
+#version 430 core
+#define OIT 1
+vec4 fragColor = vec4(0.0);
+layout(location=0) out vec4 out_accum;
+layout(location=1) out vec4 out_reveal;
+void main_body();
+void main() {
+    main_body();
+    fragColor = clamp(fragColor, 0.0, 1.0);
+    float z = 1.0 / gl_FragCoord.w;
+    float w = clamp(fragColor.a 
+  skeletal_oit: FAILED
+[SHADER] FRAGMENT COMPILE ERROR:
+Fragment shader failed to compile with the following errors:
+ERROR: 0:43: error(#385) Binding point for: buffer block must be equal or greater than 0 and less than: GL_MAX_SHADER_STORAGE_BUFFER_OBJECT_BINDINGS
+ERROR: 0:136: error(#143) Undeclared identifier: Lights
+ERROR: 0:136: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:136: error(#222) Illegal vector field selection: origin
+ERROR: 0:136: error(#174) Not enough data provided for construction constructor
+ERROR: 0:137: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:137: error(#222) Illegal vector field selection: radius
+ERROR: 0:139: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:139: error(#222) Illegal vector field selection: color
+ERROR: error(#273) 9 compilation errors.  No code generated
+
+
+[SHADER] First 300 chars of source:
+#version 430 core
+#define OIT 1
+vec4 fragColor = vec4(0.0);
+layout(location=0) out vec4 out_accum;
+layout(location=1) out vec4 out_reveal;
+void main_body();
+void main() {
+    main_body();
+    fragColor = clamp(fragColor, 0.0, 1.0);
+    float z = 1.0 / gl_FragCoord.w;
+    float w = clamp(fragColor.a 
+  skeletal_np_oit: FAILED
+  particle_oit: OK (prog=21)
+  shader 'particle_gpu' loaded (program 24)
+[SHADER] FRAGMENT COMPILE ERROR:
+Fragment shader failed to compile with the following errors:
+ERROR: 0:30: error(#385) Binding point for: buffer block must be equal or greater than 0 and less than: GL_MAX_SHADER_STORAGE_BUFFER_OBJECT_BINDINGS
+ERROR: 0:123: error(#143) Undeclared identifier: Lights
+ERROR: 0:123: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:123: error(#222) Illegal vector field selection: origin
+ERROR: 0:123: error(#174) Not enough data provided for construction constructor
+ERROR: 0:124: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:124: error(#222) Illegal vector field selection: radius
+ERROR: 0:126: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:126: error(#222) Illegal vector field selection: color
+ERROR: error(#273) 9 compilation errors.  No code generated
+
+
+[SHADER] First 300 chars of source:
+#version 430 core
+#define NOPERSP 1
+#ifdef NOPERSP
+#define TCQUAL noperspective
+#else
+#define TCQUAL
+#endif
+uniform sampler2D u_texture0;
+uniform float u_fog_density;
+uniform vec3 u_fog_color;
+uniform float u_alpha_threshold;
+uniform float u_force_opaque_alpha;
+uniform vec2 u_alias_caustics;
+uniform
+[SHADER] FRAGMENT COMPILE ERROR:
+Fragment shader failed to compile with the following errors:
+ERROR: 0:29: error(#385) Binding point for: buffer block must be equal or greater than 0 and less than: GL_MAX_SHADER_STORAGE_BUFFER_OBJECT_BINDINGS
+ERROR: 0:122: error(#143) Undeclared identifier: Lights
+ERROR: 0:122: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:122: error(#222) Illegal vector field selection: origin
+ERROR: 0:122: error(#174) Not enough data provided for construction constructor
+ERROR: 0:123: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:123: error(#222) Illegal vector field selection: radius
+ERROR: 0:125: error(#145) Left of "[" is not of type array, matrix, or vector: Lights
+ERROR: 0:125: error(#222) Illegal vector field selection: color
+ERROR: error(#273) 9 compilation errors.  No code generated
+
+
+[SHADER] First 300 chars of source:
+#version 430 core
+#ifdef NOPERSP
+#define TCQUAL noperspective
+#else
+#define TCQUAL
+#endif
+uniform sampler2D u_texture0;
+uniform float u_fog_density;
+uniform vec3 u_fog_color;
+uniform float u_alpha_threshold;
+uniform float u_force_opaque_alpha;
+uniform vec2 u_alias_caustics;
+uniform vec2 u_turb;
+unif
+WARNING: instanced alias shader failed to init
+GL_VBO: streaming VBO initialized (8192 max verts)
+PostProcess: colormap LUT built
+PostProcess: palette LUT built (OKLab metric, GPU)
+PostProcess: gamma/contrast shader ready
+OIT: resolve shader OK
+Streaming buffer ring: persistent-mapped, fence sync, multi-bind
+Reversed-Z depth buffer enabled (ARB_clip_control)
+Video initialized.
+GPU particles: SSBO ready (32768 slots, 1024 KB)
+
+Sound Initialization
+SDL audio spec  : 44100 Hz, 16 bits, 2 channels
+SDL audio driver: wasapi, 65536 bytes buffer
+Audio: 16 bit, stereo, 44100 Hz, using SDLAudio
+CDAudio disabled at compile time
+midiStream for Windows initialized.
+Hardware MIDI volume ignored (Vista+)
+BGM: MIDI driver: midiStream for Windows
+BGM: stream codecs: ogg opus mp3 flac wav it s3m xm mod umx
+SDL_Gamepad: 1 device(s) found:
+  #0: "Xbox One Controller"
+Gamepad opened: "Xbox One Controller" (Xbox)
+
+======== Hexen II Initialized =========
+
+execing hexen.rc
+execing default.cfg
+couldn't exec config.cfg
+OIT: 1280x720 FBO ready
+execing autoexec.cfg
+Gamecode: progs.dat from C:\PC\iso\hexenwail-0.8.0-beta.r30-windows-x86_64\data1/progs.dat (H2/v1.11, file crc 16640) -- Third-party
+
+VERSION 1.29 SERVER (16640 CRC)
+
+
+
+Blackmarsh
+Precache: 330/2047 models, 215/511 sounds
+Lightmaps: 10/1536 pages (260x260), atlas 2080x520
+World VBO: 22440 verts, 13146 tris in static buffer
+Sky stencil VBO: 5238 verts, 2658 tris
+GPU world cull: 4802 surfs, 5041 marksurfs, 97 buckets, 36999 max indices
+BGM: no music file for track 2 (looked in music/ for track02.{ogg,mp3,flac,wav,...})
+player entered the game
+LightCluster: disabled, driver has 8 shader storage bindings and this needs 9
+Client player removed
+Shutting down SDL sound
